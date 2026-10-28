@@ -1,0 +1,222 @@
+/* ============================================================
+   ВетДруг — стилизация шаблона
+   Лабораторные работы №3–4
+   ============================================================ */
+
+/* ---------- 1. БАЗОВЫЕ СТИЛИ ---------- */
+body {
+    background-color: #f7f9f7;
+    color: #333;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ---------- 2. ШАПКА / NAVBAR ---------- */
+.navbar {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    transition: color 0.25s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #c8e6c9 !important;
+}
+
+.navbar .btn-light {
+    font-weight: 600;
+}
+
+/* ---------- 3. HERO-БЛОК ---------- */
+.hero {
+    background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%);
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-weight: 700;
+    color: #2e7d32;
+    font-size: 42px;
+}
+
+.hero .lead {
+    font-size: 18px;
+}
+
+.hero .btn {
+    border-radius: 30px;
+    padding: 10px 26px;
+}
+
+.hero-emoji {
+    font-size: 160px;
+    line-height: 1;
+}
+
+/* ---------- 4. КАРТОЧКИ УСЛУГ ---------- */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 15px;
+}
+
+.service-icon {
+    font-size: 48px;
+    line-height: 1;
+}
+
+/* ---------- 5. ЗАГОЛОВКИ СЕКЦИЙ ---------- */
+section h2 {
+    color: #2e7d32;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #2e7d32;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ---------- 6. ФОРМА ЗАПИСИ ---------- */
+form.border {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+form h4 {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+form label {
+    font-weight: 500;
+    color: #455a64;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #cfd8dc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.2);
+}
+
+/* ---------- 7. КНОПКИ ---------- */
+.btn-success {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.25s ease;
+}
+
+.btn-success:hover {
+    background-color: #1b5e20;
+    border-color: #1b5e20;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+}
+
+/* ---------- 8. ТАБЛИЦА ПИТОМЦЕВ ---------- */
+.table {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #2e7d32;
+    color: #fff;
+}
+
+.table thead th {
+    border-color: #1b5e20;
+    font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f1f8e9;
+}
+
+.table tbody tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* ---------- 9. ПАГИНАЦИЯ ---------- */
+.pagination .page-link {
+    color: #2e7d32;
+    border-radius: 6px;
+    margin: 0 3px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+    color: #fff;
+}
+
+/* ---------- 10. ПОДВАЛ ---------- */
+footer {
+    background-color: #2e7d32;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+/* ---------- 11. АДАПТИВНОСТЬ ---------- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 0;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .hero .btn {
+        display: block;
+        width: 100%;
+        margin: 8px 0 0 0 !important;
+    }
+    .hero-emoji {
+        font-size: 100px;
+    }
+    .navbar-brand {
+        font-size: 20px;
+    }
+}
